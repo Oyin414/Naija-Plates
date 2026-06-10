@@ -1,11 +1,3 @@
-# Webpack Starter Template
+# Naija-plates
 
-A simple Webpack setup with development and production configs.Make sure to run npm install every time the template is used for a new project
-
-## Features
-
-- Webpack 5 setup
-- Separate dev and prod configs
-- CSS, HTML, and image loaders
-- Dev server with live reload
-- GitHub Pages deployment script
+Naija Plates is a Nigerian recipe app for people who want to learn how to make traditional Nigerian dishes, especially people reconnecting with their culture or exploring Nigerian food for the first time.
