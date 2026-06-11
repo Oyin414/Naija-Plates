@@ -1,0 +1,13 @@
+#recipes {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26vw, 80vw));
+  grid-template-rows: repeat(auto-fit, minmax(26vh, 80vh));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.grid-item img {
+  height: 250px;
+  width: 250px;
+}
