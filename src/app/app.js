@@ -1,17 +1,6 @@
-/*
-renderrecipes(arr)
-1.for loop that loops through the array.length
-1.first grab the recipes id container
-2. then create  a div element called griditem
-3. create a image element with src as the object image path and alt being short description
-4. create a h3 element with the recipes name
-5.create a paragragh with recipes short dexription 
-6. create 3 spans with servings , prep and  cook
- 
-*/
-
 function renderRecipes(array) {
   const recipesContainer = document.querySelector("#recipes");
+  recipesContainer.innerHTML = "";
   for (let i = 0; i < array.length; i++) {
     const gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
@@ -30,15 +19,14 @@ function renderRecipes(array) {
     serving.textContent = `Servings:${array[i].servings}`;
     detailsContainer.appendChild(serving);
     const prep = document.createElement("span");
-    prep.textContent = `Prep:${array[i].prepTime}`;
+    prep.textContent = `Prep:${array[i].prepTime} mins`;
     detailsContainer.appendChild(prep);
     const cook = document.createElement("span");
-    cook.textContent = `Cook:${array[i].cookTime}`;
+    cook.textContent = `Cook:${array[i].cookTime} mins`;
     detailsContainer.appendChild(cook);
     gridItem.appendChild(detailsContainer);
     recipesContainer.appendChild(gridItem);
   }
-  return recipesContainer;
 }
 
 export { renderRecipes };
