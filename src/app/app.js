@@ -1,6 +1,13 @@
+import { recipes } from "./data.js";
+import { searchName } from "./recipe.js";
+
 function renderRecipes(array) {
   const recipesContainer = document.querySelector("#recipes");
   recipesContainer.innerHTML = "";
+  if (array.length === 0) {
+    recipesContainer.textContent = "No Recipes Found";
+    return;
+  }
   for (let i = 0; i < array.length; i++) {
     const gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
@@ -16,17 +23,33 @@ function renderRecipes(array) {
     gridItem.appendChild(description);
     const detailsContainer = document.createElement("div");
     const serving = document.createElement("span");
-    serving.textContent = `Servings:${array[i].servings}`;
+    serving.textContent = `Servings: ${array[i].servings}`;
     detailsContainer.appendChild(serving);
     const prep = document.createElement("span");
-    prep.textContent = `Prep:${array[i].prepTime} mins`;
+    prep.textContent = `Prep: ${array[i].prepTime} mins`;
     detailsContainer.appendChild(prep);
     const cook = document.createElement("span");
-    cook.textContent = `Cook:${array[i].cookTime} mins`;
+    cook.textContent = `Cook: ${array[i].cookTime} mins`;
     detailsContainer.appendChild(cook);
     gridItem.appendChild(detailsContainer);
     recipesContainer.appendChild(gridItem);
   }
 }
 
-export { renderRecipes };
+function searchFilter() {
+  const search = document.querySelector("#recipes-search");
+  const form = document.querySelector("#form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (search.validity.valueMissing) {
+      return search.reportValidity();
+    }
+    const name = search.value;
+    const searchArray = searchName(name, recipes);
+    renderRecipes(searchArray);
+    search.value = "";
+  });
+}
+
+export { renderRecipes, searchFilter };
