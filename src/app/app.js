@@ -65,4 +65,17 @@ function filterByPrepTime() {
   });
 }
 
-export { renderRecipes, searchFilter, filterByPrepTime };
+function filterByCookTime() {
+  const cook = document.querySelector("#cook");
+  cook.addEventListener("change", function () {
+    if (cook.value === "") {
+      renderRecipes(recipes);
+      return;
+    }
+    const number = Number(cook.value);
+    const cookArray = maxCookTime(number, recipes);
+    renderRecipes(cookArray);
+  });
+}
+
+export { renderRecipes, searchFilter, filterByPrepTime, filterByCookTime };
