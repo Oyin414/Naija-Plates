@@ -1,5 +1,5 @@
 import { recipes } from "./data.js";
-import { searchName } from "./recipe.js";
+import { searchName, maxPrepTime } from "./recipe.js";
 
 function renderRecipes(array) {
   const recipesContainer = document.querySelector("#recipes");
@@ -52,4 +52,17 @@ function searchFilter() {
   });
 }
 
-export { renderRecipes, searchFilter };
+function filterByPrepTime() {
+  const prep = document.querySelector("#prep");
+  prep.addEventListener("change", function () {
+    if (prep.value === "") {
+      renderRecipes(recipes);
+      return;
+    }
+    const number = Number(prep.value);
+    const prepArray = maxPrepTime(number, recipes);
+    renderRecipes(prepArray);
+  });
+}
+
+export { renderRecipes, searchFilter, filterByPrepTime };
