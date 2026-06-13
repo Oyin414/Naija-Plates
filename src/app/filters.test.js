@@ -1,4 +1,4 @@
-import { searchName, maxPrepTime } from "./recipe.js";
+import { searchName, maxPrepTime, maxCookTime } from "./recipe.js";
 const testRecipes = [
   {
     id: 1,
@@ -20,7 +20,6 @@ const testRecipes = [
     categories: ["snacks", "dinner"],
     prepTime: 25,
     cookTime: 20,
-    servings: 4,
   },
 ];
 
@@ -67,7 +66,6 @@ test("return recipes that match case insensitive names", () => {
       categories: ["snacks", "dinner"],
       prepTime: 25,
       cookTime: 20,
-      servings: 4,
     },
   ]);
 });
@@ -117,12 +115,30 @@ test("return recipes with prep times less than or equal to selected time", () =>
       categories: ["snacks", "dinner"],
       prepTime: 25,
       cookTime: 20,
-      servings: 4,
     },
   ]);
 });
 
 test("return empty array if no match is found", () => {
   const results = maxPrepTime(15, testRecipes);
+  expect(results).toEqual([]);
+});
+
+test("return recipes with cook times less than or equal to selected time", () => {
+  const results = maxCookTime(30, testRecipes);
+  expect(results).toHaveLength(1);
+  expect(results).toEqual([
+    {
+      id: 3,
+      name: "Suya",
+      categories: ["snacks", "dinner"],
+      prepTime: 25,
+      cookTime: 20,
+    },
+  ]);
+});
+
+test("return empty array if no match is found for selected time", () => {
+  const results = maxCookTime(15, testRecipes);
   expect(results).toEqual([]);
 });
