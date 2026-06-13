@@ -5,4 +5,4 @@ import { searchName } from "./app/recipe.js";
 
 console.log(renderRecipes(recipes));
 
-console.log(searchFilter());
+console.log(searchName("Jollof Rice", recipes));
