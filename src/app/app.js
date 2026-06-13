@@ -1,5 +1,5 @@
 import { recipes } from "./data.js";
-import { searchName, maxPrepTime } from "./recipe.js";
+import { searchName, maxPrepTime, maxCookTime } from "./recipe.js";
 
 function renderRecipes(array) {
   const recipesContainer = document.querySelector("#recipes");

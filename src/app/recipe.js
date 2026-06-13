@@ -20,4 +20,14 @@ function maxPrepTime(number, array) {
   return prepArray;
 }
 
-export { searchName, maxPrepTime };
+function maxCookTime(number, array) {
+  const cookArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].cookTime <= number) {
+      cookArray.push(array[i]);
+    }
+  }
+  return cookArray;
+}
+
+export { searchName, maxPrepTime, maxCookTime };
