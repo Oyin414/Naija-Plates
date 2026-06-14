@@ -30,4 +30,11 @@ function maxCookTime(number, array) {
   return cookArray;
 }
 
-export { searchName, maxPrepTime, maxCookTime };
+function categoryFilter(string, array) {
+  const categoryArray = array.filter((item) =>
+    item.categories.includes(string),
+  );
+  return categoryArray;
+}
+
+export { searchName, maxPrepTime, maxCookTime, categoryFilter };
