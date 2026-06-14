@@ -1,4 +1,9 @@
-import { searchName, maxPrepTime, maxCookTime } from "./recipe.js";
+import {
+  searchName,
+  maxPrepTime,
+  maxCookTime,
+  categoryFilter,
+} from "./recipe.js";
 const testRecipes = [
   {
     id: 1,
