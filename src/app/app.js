@@ -83,4 +83,22 @@ function filterByCookTime() {
   });
 }
 
-export { renderRecipes, searchFilter, filterByPrepTime, filterByCookTime };
+function filterByCategory() {
+  const category = document.querySelector("#category");
+  category.addEventListener("change", function () {
+    if (category.value === "") {
+      renderRecipes(recipes);
+      return;
+    }
+    const categoryArray = categoryFilter(category.value, recipes);
+    renderRecipes(categoryArray);
+  });
+}
+
+export {
+  renderRecipes,
+  searchFilter,
+  filterByPrepTime,
+  filterByCookTime,
+  filterByCategory,
+};

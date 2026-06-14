@@ -5,6 +5,7 @@ import {
   renderRecipes,
   searchFilter,
   filterByCookTime,
+  filterByCategory,
 } from "./app/app.js";
 import {
   searchName,
@@ -15,6 +16,6 @@ import {
 
 console.log(renderRecipes(recipes));
 
-console.log(categoryFilter("dessert", recipes));
+console.log(filterByCategory());
 searchFilter();
 filterByCookTime();
