@@ -37,6 +37,10 @@ function renderRecipes(array) {
     cook.textContent = `Cook: ${array[i].cookTime} mins`;
     detailsContainer.appendChild(cook);
     gridItem.appendChild(detailsContainer);
+    const link = document.createElement("a");
+    link.href = `?id=${array[i].id}`;
+    link.textContent = `View Recipe`;
+    gridItem.appendChild(link);
     recipesContainer.appendChild(gridItem);
   }
 }
