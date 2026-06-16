@@ -3,6 +3,7 @@ import {
   maxPrepTime,
   maxCookTime,
   categoryFilter,
+  findRecipeWithId,
 } from "./recipe.js";
 const testRecipes = [
   {
@@ -184,4 +185,19 @@ test("return recipes that match selected snacks category", () => {
 test("return empty array if no match is found for selected category", () => {
   const results = categoryFilter("dessert", testRecipes);
   expect(results).toEqual([]);
+});
+
+test("return recipes which id match inputted id", () => {
+  const results = findRecipeWithId(3, testRecipes);
+  expect(results).toEqual({
+    id: 3,
+    name: "Suya",
+    categories: ["snacks", "dinner"],
+    prepTime: 25,
+    cookTime: 20,
+  });
+});
+test("return undefined if no recipes match the inputted id", () => {
+  const results = findRecipeWithId(4, testRecipes);
+  expect(results).toEqual(undefined);
 });
