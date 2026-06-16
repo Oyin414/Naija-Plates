@@ -12,10 +12,11 @@ import {
   maxPrepTime,
   maxCookTime,
   categoryFilter,
+  findRecipeWithId,
 } from "./app/recipe.js";
 
 console.log(renderRecipes(recipes));
 
-console.log(filterByCategory());
+console.log(findRecipeWithId(2, recipes));
 searchFilter();
 filterByCookTime();

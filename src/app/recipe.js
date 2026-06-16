@@ -37,4 +37,14 @@ function categoryFilter(string, array) {
   return categoryArray;
 }
 
-export { searchName, maxPrepTime, maxCookTime, categoryFilter };
+function findRecipeWithId(id, array) {
+  return array.find((element) => element.id === id);
+}
+
+export {
+  searchName,
+  maxPrepTime,
+  maxCookTime,
+  categoryFilter,
+  findRecipeWithId,
+};
