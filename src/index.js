@@ -7,6 +7,7 @@ import {
   filterByCookTime,
   filterByCategory,
   initApp,
+  clearFilter,
 } from "./app/app.js";
 
 function recipePagesHandling() {
@@ -20,6 +21,7 @@ function recipePagesHandling() {
   filterByCookTime();
   filterByCategory();
   filterByPrepTime();
+  clearFilter();
 }
 
 recipePagesHandling();

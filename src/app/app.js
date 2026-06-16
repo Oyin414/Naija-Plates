@@ -123,6 +123,18 @@ function initApp() {
   }
   main.appendChild(container);
 }
+function clearFilter() {
+  const clearButton = document.querySelector("#clear");
+  const category = document.querySelector("#category");
+  const prep = document.querySelector("#prep");
+  const cook = document.querySelector("#cook");
+  clearButton.addEventListener("click", function () {
+    category.value = "";
+    prep.value = "";
+    cook.value = "";
+    renderRecipes(recipes);
+  });
+}
 
 export {
   renderRecipes,
@@ -131,4 +143,5 @@ export {
   filterByCookTime,
   filterByCategory,
   initApp,
+  clearFilter,
 };
