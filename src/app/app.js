@@ -4,6 +4,7 @@ import {
   maxPrepTime,
   maxCookTime,
   categoryFilter,
+  findRecipeWithId,
 } from "./recipe.js";
 
 function renderRecipes(array) {
@@ -99,10 +100,35 @@ function filterByCategory() {
   });
 }
 
+function renderRecipesPages() {
+  const main = document.querySelector("#main");
+  const container = document.createElement("div");
+  const searchParam = new URLSearchParams(window.location.search);
+  if (searchParam.has("id") === false) {
+    renderRecipes(recipes);
+    return;
+  }
+  const id = Number(searchParam.get("id"));
+  const returnedRecipe = findRecipeWithId(id, recipes);
+  main.innerHTML = "";
+  if (!returnedRecipe) {
+    container.textContent = "Recipe Not Found";
+  } else {
+    const title = document.createElement("h2");
+    title.textContent = `${returnedRecipe.name}`;
+    const description = document.createElement("p");
+    description.textContent = `${returnedRecipe.description}`;
+    container.appendChild(title);
+    container.appendChild(description);
+  }
+  main.appendChild(container);
+}
+
 export {
   renderRecipes,
   searchFilter,
   filterByPrepTime,
   filterByCookTime,
   filterByCategory,
+  renderRecipesPages,
 };

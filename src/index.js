@@ -6,17 +6,11 @@ import {
   searchFilter,
   filterByCookTime,
   filterByCategory,
+  renderRecipesPages,
 } from "./app/app.js";
-import {
-  searchName,
-  maxPrepTime,
-  maxCookTime,
-  categoryFilter,
-  findRecipeWithId,
-} from "./app/recipe.js";
 
 console.log(renderRecipes(recipes));
 
-console.log(findRecipeWithId(2, recipes));
+console.log(renderRecipesPages());
 searchFilter();
 filterByCookTime();
