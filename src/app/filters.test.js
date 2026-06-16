@@ -147,3 +147,41 @@ test("return empty array if no match is found for selected time", () => {
   const results = maxCookTime(15, testRecipes);
   expect(results).toEqual([]);
 });
+
+test("return recipes that match selected lunch category", () => {
+  const results = categoryFilter("lunch", testRecipes);
+  expect(results).toHaveLength(2);
+  expect(results).toEqual([
+    {
+      id: 1,
+      name: "Jollof Rice",
+      categories: ["lunch", "dinner", "vegetarian"],
+      prepTime: 20,
+      cookTime: 60,
+    },
+    {
+      id: 2,
+      name: "Fried Rice",
+      categories: ["lunch", "dinner"],
+      prepTime: 20,
+      cookTime: 35,
+    },
+  ]);
+});
+test("return recipes that match selected snacks category", () => {
+  const results = categoryFilter("snacks", testRecipes);
+  expect(results).toHaveLength(1);
+  expect(results).toEqual([
+    {
+      id: 3,
+      name: "Suya",
+      categories: ["snacks", "dinner"],
+      prepTime: 25,
+      cookTime: 20,
+    },
+  ]);
+});
+test("return empty array if no match is found for selected category", () => {
+  const results = categoryFilter("dessert", testRecipes);
+  expect(results).toEqual([]);
+});
