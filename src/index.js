@@ -6,11 +6,20 @@ import {
   searchFilter,
   filterByCookTime,
   filterByCategory,
-  renderRecipesPages,
+  initApp,
 } from "./app/app.js";
 
-console.log(renderRecipes(recipes));
+function recipePagesHandling() {
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.has("id")) {
+    initApp();
+    return;
+  }
+  renderRecipes(recipes);
+  searchFilter();
+  filterByCookTime();
+  filterByCategory();
+  filterByPrepTime();
+}
 
-console.log(renderRecipesPages());
-searchFilter();
-filterByCookTime();
+recipePagesHandling();

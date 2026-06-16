@@ -100,7 +100,7 @@ function filterByCategory() {
   });
 }
 
-function renderRecipesPages() {
+function initApp() {
   const main = document.querySelector("#main");
   const container = document.createElement("div");
   const searchParam = new URLSearchParams(window.location.search);
@@ -130,5 +130,5 @@ export {
   filterByPrepTime,
   filterByCookTime,
   filterByCategory,
-  renderRecipesPages,
+  initApp,
 };
