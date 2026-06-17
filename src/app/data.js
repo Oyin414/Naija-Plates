@@ -9,6 +9,7 @@ imageCredit: "Photo by pixzolo-photography fron Upsplash"
 import placeHolderImage from "../images/placeholder.jpg";
 import jollofRiceImage from "../images/jollof-rice.jpg";
 import friedRiceImage from "../images/fried-rice.jpg";
+import puffPuffImage from "../images/puff-puff.jpg";
 export const recipes = [
   {
     id: 1,
@@ -110,6 +111,43 @@ export const recipes = [
   },
   {
     id: 3,
+    name: "Puff Puff",
+    shortDescription:
+      "Soft, sweet fried dough balls made with flour, yeast, sugar, and nutmeg.",
+    description:
+      "Puff Puff is a popular Nigerian snack made from a simple yeast-based batter that is left to rise before being fried until golden brown. It is soft and airy inside, slightly crisp on the outside, and often served at parties, family gatherings, or as part of small chops.",
+    categories: ["snacks", "dessert"],
+    prepTime: 60,
+    cookTime: 15,
+    servings: 6,
+    ingredients: [
+      "2 cups all-purpose flour",
+      "1/4 cup sugar",
+      "1 teaspoon instant yeast",
+      "1/2 teaspoon nutmeg",
+      "1 pinch salt",
+      "3/4 to 1 cup lukewarm water",
+      "2 tablespoons milk, optional",
+      "Vegetable oil for frying",
+    ],
+    instructions: [
+      "Add the flour, sugar, instant yeast, nutmeg, and salt to a large bowl.",
+      "Pour in the lukewarm water gradually while mixing until a thick, stretchy batter forms.",
+      "Add the milk if using, then mix again until the batter is smooth.",
+      "Cover the bowl with a clean towel or plastic wrap.",
+      "Leave the batter in a warm place until it rises and becomes airy.",
+      "Heat vegetable oil in a deep pan over medium-low heat.",
+      "Scoop small portions of the batter and carefully drop them into the hot oil.",
+      "Fry in batches, turning the puff puff so each side browns evenly.",
+      "Remove from the oil once golden brown and cooked through.",
+      "Drain on paper towels and serve warm, plain or with a sweet or spicy dip.",
+    ],
+    image: puffPuffImage,
+    imageAlt: "Golden Nigerian Puff Puff served in a bowl",
+    imageCredit: "Photo by keesha-s-kitchen fron Upsplash",
+  },
+  {
+    id: 4,
     name: "Suya",
     shortDescription: "Spicy grilled beef skewers.",
     description:
@@ -125,26 +163,6 @@ export const recipes = [
       "Coat the beef with suya spice.",
       "Grill until cooked through and slightly charred.",
       "Serve with sliced onions and tomatoes.",
-    ],
-    image: placeHolderImage,
-  },
-  {
-    id: 4,
-    name: "Puff Puff",
-    shortDescription: "Sweet deep-fried dough balls.",
-    description:
-      "Puff Puff is a soft and sweet Nigerian snack made from a simple yeast dough. It is often served at parties, gatherings, or as a quick treat.",
-    categories: ["snacks", "dessert", "vegetarian"],
-    prepTime: 15,
-    cookTime: 20,
-    servings: 6,
-    ingredients: ["Flour", "Sugar", "Yeast", "Water", "Oil"],
-    steps: [
-      "Mix flour, sugar, yeast, and warm water into a soft batter.",
-      "Cover and allow the batter to rise.",
-      "Heat oil in a deep pan.",
-      "Scoop small portions into the hot oil.",
-      "Fry until golden brown and drain before serving.",
     ],
     image: placeHolderImage,
   },
