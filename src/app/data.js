@@ -116,7 +116,7 @@ export const recipes = [
       "Soft, sweet fried dough balls made with flour, yeast, sugar, and nutmeg.",
     description:
       "Puff Puff is a popular Nigerian snack made from a simple yeast-based batter that is left to rise before being fried until golden brown. It is soft and airy inside, slightly crisp on the outside, and often served at parties, family gatherings, or as part of small chops.",
-    categories: ["snacks", "dessert"],
+    categories: ["snacks", "desserts"],
     prepTime: 60,
     cookTime: 15,
     servings: 6,
