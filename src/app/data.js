@@ -1,50 +1,6 @@
 /*
-{
-id: 1,
-name: "Jollof Rice",
-shortDescription: "A rich tomato-based rice dish cooked with peppers, onions, and spices.",
-description:
-"Jollof Rice is a popular West African one-pot rice dish made with a tomato and pepper sauce, onions, stock, and seasoning. It is commonly served at parties, celebrations, and family meals, and can be enjoyed on its own or with sides such as plantain or salad and with protein like meat or chicken.",
-categories: ["lunch", "dinner", "vegetarian"],
-prepTime: 25,
-cookTime: 75,
-servings: 5,
-ingredients: [
-"3 cups long-grain rice ",
-"4 medium tomatoes",
-"2 red bell peppers",
-"1 scotch bonnet pepper",
-"1 large onion",
-"3 tablespoons tomato paste",
-"1/4 cup vegetable oil",
-"2 cups vegetable stock",
-"1 cup water",
-"2 tablespoon curry powder",
-"1 teaspoon dried thyme",
-"1 bay leaf",
-"1 teaspoon paprika",
-"6 maggi seasoning tablets",
-"Salt to taste"
-],
-instructions: [
-"Blend the tomatoes, red bell peppers, scotch bonnet, and half of the onion until smooth.",
-"finely chop the remaining onion"
-"Heat the vegetable oil in a large pot over medium heat.",
-"fry the onion in the oil until soft and fragrant.",
-"Add the tomato paste and cook for 10 minutes, stirring often so it does not burn.",
-"Pour in the blended pepper mixture.",
-"Set the heat to low and season with curry powder, thyme, bay leaf, paprika, seasoning tablets, and salt.",
-"Cook the pepper mixture on medium heat for 15-20 minutes or until the pepper mix thickens"
-"While that is cooking rinse the rice several times until the water runs mostly clear, then drain and set aside.",
-"Add the vegetable stock and water, then stir well.",
-"Add the drained rice and stir until the rice is coated in the sauce.",
-"Cover the pot tightly with foil covering the pot and cook on low heat until the rice is tender and the liquid has absorbed.",
-"Check every 10 minutes and  it should be ready in around 30-40 minutes but add a small splash of water if the rice needs more time to soften and the pot is dry.",
-"Once ready turn off the heat and add a table spoon of oil and mix it in then let the rice steam for 5 minutes"
-],
-image: placeholderImage,
-imageAlt: "A plate of Nigerian Jollof Rice",
-imageCredit: "Photo by keesha-s-kitchen fron Upsplash"
+
+imageCredit: "Photo by pixzolo-photography fron Upsplash"
 }
 
 
@@ -52,6 +8,7 @@ imageCredit: "Photo by keesha-s-kitchen fron Upsplash"
 
 import placeHolderImage from "../images/placeholder.jpg";
 import jollofRiceImage from "../images/jollof-rice.jpg";
+import friedRiceImage from "../images/fried-rice.jpg";
 export const recipes = [
   {
     id: 1,
@@ -103,23 +60,53 @@ export const recipes = [
   },
   {
     id: 2,
-    name: "Fried Rice",
-    shortDescription: "A colourful rice dish cooked with vegetables.",
+    name: "Nigerian Fried Rice",
+    shortDescription:
+      "A colourful rice dish cooked with stock, curry powder, vegetables, and protein.",
     description:
-      "Nigerian Fried Rice is a flavourful rice dish cooked with mixed vegetables and seasoning. It is commonly served at parties with chicken, plantain, or salad.",
+      "Nigerian Fried Rice is a popular party-style rice dish made with seasoned stock, curry powder, mixed vegetables, and protein such as turkey, chicken, or beef liver. It is known for its bright colour, savoury flavour, and crunchy vegetables, and is often served at celebrations with plantain, coleslaw, or grilled meat.",
     categories: ["lunch", "dinner"],
-    prepTime: 20,
-    cookTime: 35,
-    servings: 4,
-    ingredients: ["Rice", "Mixed vegetables", "Onion", "Stock", "Curry powder"],
-    steps: [
-      "Parboil the rice until partly cooked.",
-      "Fry onions and vegetables with seasoning.",
-      "Add the rice and stock gradually.",
-      "Stir and cook until the rice is soft.",
-      "Serve warm with your preferred side.",
+    prepTime: 45,
+    cookTime: 50,
+    servings: 6,
+    ingredients: [
+      "5 cups basmati rice or long-grain parboiled rice",
+      "4 cups seasoned turkey or chicken stock",
+      "1 cup water",
+      "2 teaspoons curry powder",
+      "1 seasoning cube",
+      "1 green bell pepper, diced",
+      "3 large carrots, diced",
+      "1 cup sweet corn",
+      "1 handful green beans, chopped",
+      "1 bunch spring onions, chopped",
+      "1 onion, chopped",
+      "1 thumb-sized piece ginger, grated",
+      "2 habanero peppers, finely chopped",
+      "3 tablespoons butter",
+      "1/4 cup vegetable oil",
+      "1 teaspoon white pepper",
+      "500g cooked beef liver, diced",
+      "Salt to taste",
     ],
-    image: placeHolderImage,
+    instructions: [
+      "Rinse the rice several times until the water runs mostly clear, then drain it well.",
+      "Add the rice to a pot with butter and lightly fry it for a few minutes to help keep the grains separate.",
+      "Pour in the seasoned stock, water, curry powder, seasoning cube, and diced green bell pepper.",
+      "Cook the rice until it is mostly done but still firm enough to stir-fry later.",
+      "Spread the rice out or leave it uncovered for a short time so it cools slightly and does not clump.",
+      "Prepare the vegetables by dicing the carrots, chopping the green beans, slicing the spring onions, and draining the sweet corn if using canned corn.",
+      "Heat vegetable oil in a large pan or wok, then add the onion and grated ginger.",
+      "Add the sweet corn, green beans, bell pepper, habanero, carrots, and white pepper.",
+      "Stir-fry the vegetables briefly so they stay colourful and slightly crunchy.",
+      "Add the diced cooked liver and stir it through the vegetables.",
+      "Add the cooked rice in batches and stir-fry until the rice, vegetables, and protein are evenly mixed.",
+      "Taste and adjust the seasoning with salt or extra seasoning if needed.",
+      "Garnish with spring onions and serve warm with plantain, coleslaw, or grilled protein.",
+    ],
+    image: friedRiceImage,
+    imageAlt: "A plate of Nigerian Fried Rice with mixed vegetables",
+    imageCredit: "Photo by pixzolo-photography fron Upsplash",
   },
   {
     id: 3,
