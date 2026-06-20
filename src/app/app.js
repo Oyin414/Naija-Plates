@@ -103,6 +103,7 @@ function filterByCategory() {
 function initApp() {
   const main = document.querySelector("#main");
   const container = document.createElement("div");
+  container.classList.add("recipe-detail-container");
   const searchParam = new URLSearchParams(window.location.search);
   if (searchParam.has("id") === false) {
     renderRecipes(recipes);
@@ -114,12 +115,62 @@ function initApp() {
   if (!returnedRecipe) {
     container.textContent = "Recipe Not Found";
   } else {
+    const imageContainer = document.createElement("div");
+    const image = document.createElement("img");
+    image.src = returnedRecipe.image;
+    image.alt = returnedRecipe.imageAlt;
+    imageContainer.appendChild(image);
+    imageContainer.classList.add("recipe-detail-image");
+    container.appendChild(imageContainer);
     const title = document.createElement("h2");
+    title.classList.add("recipe-detail-title");
     title.textContent = `${returnedRecipe.name}`;
+    container.appendChild(title);
     const description = document.createElement("p");
     description.textContent = `${returnedRecipe.description}`;
-    container.appendChild(title);
+    description.classList.add("recipe-detail-description");
     container.appendChild(description);
+    const detailsContainer = document.createElement("div");
+    detailsContainer.classList.add("recipe-detail-times");
+    const prepTime = document.createElement("p");
+    prepTime.textContent = `Prep Time: ${returnedRecipe.prepTime} mins`;
+    detailsContainer.appendChild(prepTime);
+    const cookTime = document.createElement("p");
+    cookTime.textContent = `Cook Time: ${returnedRecipe.cookTime} mins`;
+    detailsContainer.appendChild(cookTime);
+    const servings = document.createElement("p");
+    servings.textContent = `Servings: ${returnedRecipe.servings}`;
+    detailsContainer.appendChild(servings);
+    container.appendChild(detailsContainer);
+    const recipeContainer = document.createElement("div");
+    recipeContainer.classList.add("recipe-detail-info");
+    const ingredientsContainer = document.createElement("div");
+    ingredientsContainer.classList.add("recipe-detail-lists");
+    const ingredientsTitle = document.createElement("h3");
+    ingredientsTitle.textContent = "Ingredients";
+    ingredientsContainer.appendChild(ingredientsTitle);
+    const ingredients = document.createElement("ul");
+    for (let i = 0; i < returnedRecipe.ingredients.length; i++) {
+      const list = document.createElement("li");
+      list.textContent = `${returnedRecipe.ingredients[i]}`;
+      ingredients.appendChild(list);
+    }
+    ingredientsContainer.appendChild(ingredients);
+    container.appendChild(ingredientsContainer);
+    const instructionsContainer = document.createElement("div");
+    instructionsContainer.classList.add("recipe-detail-lists");
+    const instructionsTitle = document.createElement("h3");
+    instructionsTitle.textContent = "Instructions";
+    instructionsContainer.appendChild(instructionsTitle);
+    const instructions = document.createElement("ol");
+    for (let i = 0; i < returnedRecipe.instructions.length; i++) {
+      const list = document.createElement("li");
+      list.textContent = `${returnedRecipe.instructions[i]}`;
+      instructions.appendChild(list);
+    }
+    instructionsContainer.appendChild(instructions);
+    container.appendChild(instructionsContainer);
+    container.appendChild(recipeContainer);
   }
   main.appendChild(container);
 }
