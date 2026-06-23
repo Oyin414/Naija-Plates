@@ -132,14 +132,29 @@ function initApp() {
     container.appendChild(description);
     const detailsContainer = document.createElement("div");
     detailsContainer.classList.add("recipe-detail-times");
-    const prepTime = document.createElement("p");
-    prepTime.textContent = `Prep Time: ${returnedRecipe.prepTime} mins`;
+    const prepTime = document.createElement("div");
+    const prepLabel = document.createElement("span");
+    prepLabel.textContent = "Prep Time:";
+    prepTime.appendChild(prepLabel);
+    const prepValue = document.createElement("p");
+    prepValue.textContent = `${returnedRecipe.prepTime} mins`;
+    prepTime.appendChild(prepValue);
     detailsContainer.appendChild(prepTime);
-    const cookTime = document.createElement("p");
-    cookTime.textContent = `Cook Time: ${returnedRecipe.cookTime} mins`;
+    const cookTime = document.createElement("div");
+    const cookLabel = document.createElement("span");
+    cookLabel.textContent = "Cook Time:";
+    cookTime.appendChild(cookLabel);
+    const cookValue = document.createElement("p");
+    cookValue.textContent = `${returnedRecipe.cookTime} mins`;
+    cookTime.appendChild(cookValue);
     detailsContainer.appendChild(cookTime);
-    const servings = document.createElement("p");
-    servings.textContent = `Servings: ${returnedRecipe.servings}`;
+    const servings = document.createElement("div");
+    const servingsLabel = document.createElement("span");
+    servingsLabel.textContent = "Servings:";
+    servings.appendChild(servingsLabel);
+    const servingsValue = document.createElement("p");
+    servings.appendChild(servingsValue);
+    servingsValue.textContent = `${returnedRecipe.servings}`;
     detailsContainer.appendChild(servings);
     container.appendChild(detailsContainer);
     const recipeContainer = document.createElement("div");
@@ -156,7 +171,7 @@ function initApp() {
       ingredients.appendChild(list);
     }
     ingredientsContainer.appendChild(ingredients);
-    container.appendChild(ingredientsContainer);
+    recipeContainer.appendChild(ingredientsContainer);
     const instructionsContainer = document.createElement("div");
     instructionsContainer.classList.add("recipe-detail-lists");
     const instructionsTitle = document.createElement("h3");
@@ -169,7 +184,7 @@ function initApp() {
       instructions.appendChild(list);
     }
     instructionsContainer.appendChild(instructions);
-    container.appendChild(instructionsContainer);
+    recipeContainer.appendChild(instructionsContainer);
     container.appendChild(recipeContainer);
   }
   main.appendChild(container);
