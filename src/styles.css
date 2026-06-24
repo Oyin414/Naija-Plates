@@ -15,6 +15,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   font-weight: 400;
@@ -64,23 +65,6 @@ nav a {
   background-color: var(--color-primary-dark);
 }
 
-@media (min-width: 768px) {
-  .nav_toggle {
-    display: none;
-  }
-
-  nav {
-    margin-left: 3rem;
-  }
-
-  .nav_links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-right: 5rem;
-  }
-}
-
 .nav_links_active {
   display: flex;
   flex-direction: column;
@@ -113,20 +97,122 @@ hr {
   margin-top: 1rem;
   max-width: 700px;
   color: var(--color-text-muted);
+  margin: 1rem 2rem;
 }
+
+/*About*/
+
+#about h2 {
+  text-align: center;
+  color: var(--color-primary-dark);
+  font-size: 2.5rem;
+}
+
+.about_container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.about_details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.about_details p {
+  color: var(--color-text-muted);
+}
+
+.about_image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+/* Form*/
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+#form select {
+  padding: 5px;
+  width: 100%;
+  border-color: var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+}
+#form input {
+  width: 65%;
+  padding: 5px;
+  border-color: var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+}
+#form button {
+  padding: 6px;
+  border-color: var(--color-primary-dark);
+  background-color: var(--color-background);
+  color: var(--color-primary-darkest);
+}
+
+/*recipes*/
 
 #recipes {
   width: 80vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(26vw, 80vw));
-  grid-template-rows: repeat(auto-fit, minmax(26vh, 80vh));
-  column-gap: 10px;
-  row-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 3rem;
+  padding: 10px;
+  row-gap: 2rem;
+  margin: 2rem auto;
+}
+.grid-item {
+  border: 1px solid var(--color-border);
+  padding: 10px;
+  color: var(--color-card);
 }
 
-.grid-item img {
+.grid-item a {
+  text-decoration: none;
+}
+
+.image {
   display: block;
-  max-width: 20%;
+  max-width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  padding: 0;
+}
+
+.grid-item h3 {
+  color: var(--color-primary-darkest);
+}
+
+.grid-item p {
+  color: var(--color-primary-dark);
+}
+
+.grid-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-details div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  color: var(--color-primary-dark);
+}
+
+.grid-details img {
+  height: 2rem;
 }
 
 .recipe-detail-container {
@@ -147,7 +233,7 @@ hr {
   justify-content: space-around;
 }
 .recipe-detail-times img {
-  height: 4rem;
+  height: 2rem;
 }
 
 .recipe-detail-times div {
@@ -164,15 +250,88 @@ hr {
   display: block;
   width: 100%;
   max-height: 900px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .recipe-detail-info {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 3rem;
 }
 
 .recipe-detail-lists {
   max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .nav_toggle {
+    display: none;
+  }
+
+  nav {
+    margin-left: 3rem;
+  }
+
+  .nav_links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 5rem;
+  }
+
+  .recipe-detail-times img {
+    min-height: 5rem;
+  }
+
+  .recipe-detail-info {
+    justify-content: space-around;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  #form select {
+    max-height: 40px;
+    min-width: 200px;
+  }
+
+  .search_input {
+    display: flex;
+    gap: 5px;
+    margin-left: 10rem;
+  }
+
+  .selects {
+    display: flex;
+    gap: 5px;
+  }
+
+  #form input {
+    min-width: 300px;
+    padding: 5px;
+  }
+
+  .about_container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .about_image {
+    width: 50%;
+  }
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem;
+  background-color: var(--color-primary-darkest);
+  color: white;
+  margin-top: 2rem;
 }
