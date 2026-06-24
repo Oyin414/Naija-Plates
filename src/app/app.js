@@ -6,6 +6,9 @@ import {
   categoryFilter,
   findRecipeWithId,
 } from "./recipe.js";
+import fullClockIcon from "../images/clock-solid-full.svg";
+import ClockIcon from "../images/clock-regular-full.svg";
+import groupIcon from "../images/user-group-solid-full.svg";
 
 function renderRecipes(array) {
   const recipesContainer = document.querySelector("#recipes");
@@ -133,7 +136,12 @@ function initApp() {
     const detailsContainer = document.createElement("div");
     detailsContainer.classList.add("recipe-detail-times");
     const prepTime = document.createElement("div");
-    const prepLabel = document.createElement("span");
+    const prepImage = document.createElement("img");
+    prepImage.src = fullClockIcon;
+    prepImage.alt = "";
+    prepImage.ariaHidden = "true";
+    prepTime.appendChild(prepImage);
+    const prepLabel = document.createElement("div");
     prepLabel.textContent = "Prep Time:";
     prepTime.appendChild(prepLabel);
     const prepValue = document.createElement("p");
@@ -141,7 +149,12 @@ function initApp() {
     prepTime.appendChild(prepValue);
     detailsContainer.appendChild(prepTime);
     const cookTime = document.createElement("div");
-    const cookLabel = document.createElement("span");
+    const cookImage = document.createElement("img");
+    cookImage.src = ClockIcon;
+    cookImage.alt = "";
+    cookImage.ariaHidden = "true";
+    cookTime.appendChild(cookImage);
+    const cookLabel = document.createElement("div");
     cookLabel.textContent = "Cook Time:";
     cookTime.appendChild(cookLabel);
     const cookValue = document.createElement("p");
@@ -149,7 +162,12 @@ function initApp() {
     cookTime.appendChild(cookValue);
     detailsContainer.appendChild(cookTime);
     const servings = document.createElement("div");
-    const servingsLabel = document.createElement("span");
+    const servingsImage = document.createElement("img");
+    servingsImage.src = groupIcon;
+    servingsImage.alt = "";
+    servingsImage.ariaHidden = "true";
+    servings.appendChild(servingsImage);
+    const servingsLabel = document.createElement("div");
     servingsLabel.textContent = "Servings:";
     servings.appendChild(servingsLabel);
     const servingsValue = document.createElement("p");
@@ -202,6 +220,15 @@ function clearFilter() {
   });
 }
 
+function toggleNav() {
+  const navToggle = document.querySelector(".nav_toggle");
+  const navLinks = document.querySelector(".nav_links");
+
+  navToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("nav_links_active");
+  });
+}
+
 export {
   renderRecipes,
   searchFilter,
@@ -210,4 +237,5 @@ export {
   filterByCategory,
   initApp,
   clearFilter,
+  toggleNav,
 };

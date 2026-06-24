@@ -8,6 +8,7 @@ import {
   filterByCategory,
   initApp,
   clearFilter,
+  toggleNav,
 } from "./app/app.js";
 
 function recipePagesHandling() {
@@ -22,6 +23,7 @@ function recipePagesHandling() {
   filterByCategory();
   filterByPrepTime();
   clearFilter();
+  toggleNav();
 }
 
 recipePagesHandling();
