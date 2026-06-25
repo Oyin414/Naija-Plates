@@ -112,7 +112,6 @@ function searchFilter() {
       return search.reportValidity();
     }
     combinedFilter(recipes);
-    search.value = "";
   });
 }
 
@@ -246,10 +245,12 @@ function clearFilter() {
   const category = document.querySelector("#category");
   const prep = document.querySelector("#prep");
   const cook = document.querySelector("#cook");
+  const search = document.querySelector("#recipes-search");
   clearButton.addEventListener("click", function () {
     category.value = "";
     prep.value = "";
     cook.value = "";
+    search.value = "";
     renderRecipes(recipes);
   });
 }
