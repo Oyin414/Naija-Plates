@@ -447,7 +447,7 @@ export const recipes = [
     ],
     image: bunsImage,
     imageAlt: "Golden Nigerian buns with a crisp outside and soft centre",
-    imageCredit: "Photo by Mak on Unsplash",
+    imageCredit: "Photo by Mak on Upsplash",
   },
   {
     id: 11,
