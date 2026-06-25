@@ -160,6 +160,12 @@ hr {
   color: var(--color-primary-darkest);
 }
 
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
 /*recipes*/
 
 #recipes {
