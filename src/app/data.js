@@ -1,11 +1,3 @@
-/*
-
-imageCredit: "Photo by pixzolo-photography fron Upsplash"
-}
-
-
-*/
-
 import jollofRiceImage from "../images/jollof-rice.jpg";
 import friedRiceImage from "../images/fried-rice.jpg";
 import puffPuffImage from "../images/puff-puff.jpg";
@@ -64,7 +56,7 @@ export const recipes = [
     ],
     image: jollofRiceImage,
     imageAlt: "A plate of Nigerian Jollof Rice",
-    imageCredit: "Photo by keesha-s-kitchen from Upsplash",
+    imageCredit: "Photo by keesha-s-kitchen from Unsplash",
   },
   {
     id: 2,
@@ -114,7 +106,7 @@ export const recipes = [
     ],
     image: friedRiceImage,
     imageAlt: "A plate of Nigerian Fried Rice with mixed vegetables",
-    imageCredit: "Photo by pixzolo-photography from Upsplash",
+    imageCredit: "Photo by pixzolo-photography from Unsplash",
   },
   {
     id: 3,
@@ -151,7 +143,7 @@ export const recipes = [
     ],
     image: puffPuffImage,
     imageAlt: "Golden Nigerian Puff Puff served in a bowl",
-    imageCredit: "Photo by keesha-s-kitchen from Upsplash",
+    imageCredit: "Photo by keesha-s-kitchen from Unsplash",
   },
   {
     id: 4,
@@ -232,7 +224,7 @@ export const recipes = [
     image: egusiSoupImage,
     imageAlt:
       "A bowl of Nigerian egusi soup made with melon seeds, meat, fish, and leafy greens",
-    imageCredit: "Photo by Tosan Dundun from Upsplash",
+    imageCredit: "Photo by Tosan Dundun from Unsplash",
   },
   {
     id: 6,
@@ -357,7 +349,7 @@ export const recipes = [
     image: beefStewImage,
     imageAlt:
       "Nigerian beef stew served in a bowl with rich red tomato and pepper sauce",
-    imageCredit: "Photo by VK Bro from Upsplash",
+    imageCredit: "Photo by VK Bro from Unsplash",
   },
   {
     id: 9,
@@ -447,7 +439,7 @@ export const recipes = [
     ],
     image: bunsImage,
     imageAlt: "Golden Nigerian buns with a crisp outside and soft centre",
-    imageCredit: "Photo by Mak on Upsplash",
+    imageCredit: "Photo by Mak on Unsplash",
   },
   {
     id: 11,

@@ -17,7 +17,7 @@ https://github.com/Oyin414/Naija-Plates
 - Filter recipes by category
 - Filter recipes by maximum prep time
 - Filter recipes by maximum cook time
-- combine filters to find recipes
+- Combine filters to find recipes
 - Clear active search and filters
 - View full recipe details on a dedicated recipe page
 - Responsive layout for mobile, tablet, and desktop
@@ -32,11 +32,11 @@ https://github.com/Oyin414/Naija-Plates
 
 ## What I Learned
 
-While building Naija Plates, I learned that building a responsive website isn't difficult and HTML itself is already responsive and building from a mobile first approach is easier. While building the website I worked on separating recipe data from display logic, building search and filter functionality, handling recipe detail pages with URL parameters, writing tests for core logic, and improving the user interface across different screen sizes.
+While building Naija Plates, I learned that building mobile-first made responsive design more manageable, while building the website I worked on separating recipe data from display logic, building search and filter functionality, handling recipe detail pages with URL parameters, writing tests for core logic, and improving the user interface across different screen sizes.
 
 ## Challenges
 
-One challenge Ifaced when building Naija plates was making the search and filter controls work together properly. At first, each filter worked independently, which meant that the selected filters didn't always match the displayed recipes. I fixed this by changing the logic so the app applies the active search and filter values together before rendering the results.
+One challenge I faced when building Naija plates was making the search and filter controls work together properly. At first, each filter worked independently, which meant that the selected filters didn't always match the displayed recipes. I fixed this by changing the logic so the app applies the active search and filter values together before rendering the results.
 
 Another challenge was making the recipe pages responsive while keeping the design simple and readable. I focused on building a clean layout first, then added styling and spacing once the structure worked.
 
@@ -50,16 +50,16 @@ Another challenge was making the recipe pages responsive while keeping the desig
 
 ## Image Credits
 
-- Jollof Rice: Photo by keesha-s-kitchen from Upsplash
-- Nigerian Fried Rice: Photo by pixzolo-photography from Upsplash
-- Puff Puff: Photo by keesha-s-kitchen from Upsplash
+- Jollof Rice: Photo by keesha-s-kitchen from unsplash
+- Nigerian Fried Rice: Photo by pixzolo-photography from unsplash
+- Puff Puff: Photo by keesha-s-kitchen from unsplash
 - Suya: Photo by Deborah silveira from Pexels
-- Egusi Soup: Photo by Tosan Dundun from Upsplash
+- Egusi Soup: Photo by Tosan Dundun from unsplash
 - Yam and Egg: Photo by mk_photoz from Pexels
 - Pap: Photo by Tochukwu Ekeh from Pexels
-- Nigerian Beef Stew: Photo by VK Bro on Upsplash
+- Nigerian Beef Stew: Photo by VK Bro on unsplash
 - Nigerian Meat Pie: Photo by Ozichi Ogbu on Pexels
-- Nigerian Buns: Photo by Mak on Upsplash
+- Nigerian Buns: Photo by Mak on unsplash
 - Fried Plantain: Photo by SC Studio on Pexels
 
 ## Recipe References
