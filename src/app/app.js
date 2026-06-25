@@ -71,6 +71,37 @@ function renderRecipes(array) {
   }
 }
 
+function combinedFilter(array) {
+  let currentArray = array;
+  const search = document.querySelector("#recipes-search").value;
+  const prep = document.querySelector("#prep").value;
+  const cook = document.querySelector("#cook").value;
+  const category = document.querySelector("#category").value;
+
+  if (search !== "") {
+    currentArray = searchName(search, currentArray);
+  }
+  if (prep !== "") {
+    if (currentArray.length === 0) {
+      return renderRecipes(currentArray);
+    }
+    currentArray = maxPrepTime(prep, currentArray);
+  }
+  if (cook !== "") {
+    if (currentArray.length === 0) {
+      return renderRecipes(currentArray);
+    }
+    currentArray = maxCookTime(cook, currentArray);
+  }
+  if (category !== "") {
+    if (currentArray.length === 0) {
+      return renderRecipes(currentArray);
+    }
+    currentArray = categoryFilter(category, currentArray);
+  }
+  return renderRecipes(currentArray);
+}
+
 function searchFilter() {
   const search = document.querySelector("#recipes-search");
   const form = document.querySelector("#form");
@@ -80,9 +111,7 @@ function searchFilter() {
     if (search.validity.valueMissing) {
       return search.reportValidity();
     }
-    const name = search.value;
-    const searchArray = searchName(name, recipes);
-    renderRecipes(searchArray);
+    combinedFilter(recipes);
     search.value = "";
   });
 }
@@ -90,38 +119,21 @@ function searchFilter() {
 function filterByPrepTime() {
   const prep = document.querySelector("#prep");
   prep.addEventListener("change", function () {
-    if (prep.value === "") {
-      renderRecipes(recipes);
-      return;
-    }
-    const number = Number(prep.value);
-    const prepArray = maxPrepTime(number, recipes);
-    renderRecipes(prepArray);
+    combinedFilter(recipes);
   });
 }
 
 function filterByCookTime() {
   const cook = document.querySelector("#cook");
   cook.addEventListener("change", function () {
-    if (cook.value === "") {
-      renderRecipes(recipes);
-      return;
-    }
-    const number = Number(cook.value);
-    const cookArray = maxCookTime(number, recipes);
-    renderRecipes(cookArray);
+    combinedFilter(recipes);
   });
 }
 
 function filterByCategory() {
   const category = document.querySelector("#category");
   category.addEventListener("change", function () {
-    if (category.value === "") {
-      renderRecipes(recipes);
-      return;
-    }
-    const categoryArray = categoryFilter(category.value, recipes);
-    renderRecipes(categoryArray);
+    combinedFilter(recipes);
   });
 }
 
@@ -260,4 +272,5 @@ export {
   initApp,
   clearFilter,
   toggleNav,
+  combinedFilter,
 };

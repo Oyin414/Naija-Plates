@@ -237,9 +237,6 @@ hr {
 }
 
 .recipe-detail-times div {
-  line-height: 0.8;
-}
-.recipe-detail-times div {
   color: var(--color-primary-dark);
 }
 .recipe-detail-times p {
@@ -291,8 +288,15 @@ hr {
   #form {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2rem;
+  }
+
+  #form selects {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
   }
 
   #form select {
